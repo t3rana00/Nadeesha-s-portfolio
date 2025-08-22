@@ -1,0 +1,102 @@
+/* ---------- Theme ---------- */
+:root{
+  --accent: #1f84b8;           /* one accent color across the site */
+  --accent-dark: #166890;
+  --accent-contrast: #e6f4ff;
+}
+
+/* Smooth scrolling and base */
+html { scroll-behavior: smooth; }
+body { background: #f6f8fa; }
+
+/* Headings share the same accent color */
+.section-title, h2.section-title, h3.section-title {
+  color: var(--accent) !important;
+}
+.hero h1 { color: #fff; } /* keep hero readable on blue */
+
+/* Primary buttons use the accent */
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+.btn-primary:hover,
+.btn-primary:focus{
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+/* ---------- Carousel sizing + border highlight ---------- */
+.small-carousel { max-width: 900px; margin: 0 auto; }
+
+/* Accent frame around the slides */
+.accent-frame .carousel-inner{
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.15);
+  overflow: hidden;
+}
+
+/* Tidy images */
+.small-carousel img{
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;          /* show whole logo/screenshot */
+  background: #f8f9fa;
+  padding: 12px;
+}
+
+/* Make the chevrons bigger and always visible inside circular buttons */
+.small-carousel .carousel-control-prev,
+.small-carousel .carousel-control-next{
+  width: 10%;
+  opacity: 1;
+}
+.small-carousel .carousel-control-prev-icon,
+.small-carousel .carousel-control-next-icon{
+  filter: invert(1);            /* white icon on dark bg */
+  background-color: rgba(0,0,0,.55);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  width: 3rem; height: 3rem;
+  background-size: 60% 60%;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+/* Small hint under carousel */
+.hint-arrows{
+  color: var(--accent);
+  font-weight: 600;
+}
+.hint-arrows i{ font-size: 1.1rem; }
+
+/* ---------- Gradient sections + glass cards ---------- */
+.section-bg{
+  background: radial-gradient(1200px circle at 10% 10%, #0b6b75 0%, #12465c 28%, #3a8aa8 58%, #9bc7d5 100%);
+}
+.glass-card{
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(0,0,0,0.25));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  color: #fff;
+}
+
+/* Optional: links inside gradient look cleaner this way */
+.section-bg a{ color: var(--accent-contrast); text-decoration: underline; }
+.section-bg a:hover{ color: #fff; }
+/* Make section titles light on gradient backgrounds */
+.section-bg .section-title {
+  color: var(--accent-contrast) !important;
+}
+
+/* Outline buttons inside glass/gradient should be light */
+.section-bg .btn-outline-light {
+  border-color: var(--accent-contrast);
+  color: var(--accent-contrast);
+}
+.section-bg .btn-outline-light:hover {
+  background: var(--accent-contrast);
+  color: #0b2239;
+}
