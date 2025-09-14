@@ -290,7 +290,7 @@ export default function App() {
                 <h3 className="mb-3">Languages</h3>
                 <ul className="list-unstyled mb-0">
                   <li className="mb-2"><i className="bi bi-translate me-2"></i>English</li>
-                  <li className="mb-2"><i className="bi bi-translate me-2"></i>Nepali</li>
+                  <li className="mb-2"><i className="bi bi-translate me-2"></i>Sinhalese</li>
                   <li className="mb-2"><i className="bi bi-translate me-2"></i>Hindi</li>
                   <li className="mb-2"><i className="bi bi-translate me-2"></i>Finnish</li>
                 </ul>
